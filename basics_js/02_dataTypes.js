@@ -1,0 +1,1 @@
+"use strict"; // use all the latest feature of JS
