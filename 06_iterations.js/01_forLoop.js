@@ -29,6 +29,9 @@ for (let index = 0; index < myArray.length; index++) {
 
 
 // break and continue
+//The continue statement breaks one iteration (in the loop), if a specified condition occurs, and continues with the next iteration in the loop.
+
+//The break statement terminates the current loop or switch statement and transfers program control to the statement following the terminated statement
 
 // for (let index = 1; index <= 20; index++) {
 //     if (index == 5) {
