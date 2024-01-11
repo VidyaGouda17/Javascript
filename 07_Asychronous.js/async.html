@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Async Operations in Javascript</h1>
+  <button id ='stopped'>Click me </button>
+  <script>
+    //browser functions will get setTimeOut() , setInterval(), clearTimeOut() clearInterval(), 
+    /*
+    1) setTimeOut(functionRef, delay, param1, param2) => this sets a timer to execute the function when the timer expires
+    2) clearInterval (functionRef) => This method clears a timer set with the setTimeout() method.
+
+    */
+   const sayHello = () =>{
+    console.log("hi javascript")
+   }
+
+    setTimeout(sayHello, 1000);
+    const changeText = () => {
+      document.querySelector('h1').innerHTML = "Javascript is best.";
+    }
+   const changeMe = setTimeout(changeText, 3000);
+
+    document.querySelector('#stopped').addEventListener('click', () => {
+      clearTimeout(changeMe);
+      console.log('Stopped')
+    })
+    
+    const changeTextWithParam = (p1, p2) => {
+      document.querySelector('h1').innerText = `say ${p1}, ${p2}`
+    }
+    // setTimeOut with the callback function , timer and the parameters 
+    const changeMeWithParam = setTimeout(changeTextWithParam, 3000, "Hello" , "Javascript");
+  </script>
+</body>
+</html>

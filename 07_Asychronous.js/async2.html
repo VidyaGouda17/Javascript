@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Async Operations in Javascript</h1>
+  <button id ='start'>Start me </button>
+    <button id ='stop'>Stop me </button>
+
+  <script>
+    //browser functions will get  setInterval(), clearInterval(), 
+    /*
+    1) setInterval(functionRef, delay, param1, param2) => this sets a timer to execute the function 
+              again and again 
+    2) clearInterval (functionRef) => to cancel the interval will use the clearInterval 
+    */
+
+    const startClicked = () =>{
+      document.querySelector('#start').addEventListener('click' , () => {
+      console.log("Button start", Date.now());
+      document.querySelector('h1').innerText = "Started "
+        console.log("Button start", Date.now())
+      })
+    }
+    const clearTime = setInterval(startClicked , 2000);
+   
+      document.querySelector('#stop').addEventListener('click' , () =>{
+      document.querySelector('h1').innerHTML = "Stopped"
+        console.log("Button stop");
+        clearInterval(clearTime)
+      })
+  </script>
+</body>
+</html>
