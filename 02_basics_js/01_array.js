@@ -25,7 +25,7 @@ myarray.unshift(9);
 //console.log(myarray);// [9, 1, 2, 3, 4,5];
 
 /*
-shift: - to remove the element at the oth index in the array 
+shift: - to remove the element at the 0th index in the array 
 */
 
 myarray.shift(9);
