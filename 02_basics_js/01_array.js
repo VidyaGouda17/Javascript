@@ -14,7 +14,7 @@ let myarray = [1, 2, 3, 4,5];
 // myarray.push(9);
 // console.log(myarray);// [1, 2, 3, 4,5, 9];
 
-// push :- to remove the element at the last index in the array ;
+// pop :- to remove the element at the last index in the array ;
 // myarray.pop();
 // console.log(myarray);// [1, 2, 3, 4,5];
 
